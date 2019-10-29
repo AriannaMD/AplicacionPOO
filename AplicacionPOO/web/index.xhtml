@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Aplicación POO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <h1>Calcular Perímetro del Círculo</h1>
+    <form jsf:prependId="false">
+      <p>
+          <h4>Ingrese su nombre </h4>  
+        <input jsf:id="nombre" type="text" placeholder="Nombre"
+               jsf:required="true" jsf:value="#{ctrlPerimetro.nombre}"/>
+        <h:message for="nombre"/>
+      </p>
+        <br/>
+
+      <p>
+        <h4>Ingrese el radio del circulo  </h4>
+        <input jsf:id="radio" type="number" placeholder="Radio"
+               jsf:required="true" jsf:value="#{ctrlPerimetro.radio}"/>
+        <h:message for="radio"/>
+        
+      </p>
+      <p>
+	 <button jsf:action="#{ctrlPerimetro.calcularPerimetro()}">Calcular perímetro</button>
+      </p>
+        <p>
+            <h:messages globalOnly="true"/> 
+        </p>
+    </form>
+  </body>
+</html>
